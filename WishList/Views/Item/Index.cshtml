@@ -1,9 +1,5 @@
 ﻿@model List<WishList.Models.Item>
 
-@{
-    ViewData["Title"] = "ItemIndex";
-}
-
 <h2>ItemIndex</h2>
 
 <h1>WishList</h1>
@@ -13,8 +9,7 @@
     @{
         foreach (var item in Model)
         {
-            <li>@item.Description</li>
-            <a asp-action="delete" asp-route-id="@item.Id">Delete</a>
+            <li>@item.Description <a asp-action="delete" asp-route-id="@item.Id">Delete</a></li>
         }
     }
 </ul>
